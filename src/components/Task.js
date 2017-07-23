@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
+import gql from 'graphql-tag';
+import { propType } from 'graphql-anywhere';
+
 import '../index.css';
 
 const alignStyles = {
@@ -7,7 +10,7 @@ const alignStyles = {
   padding: '0.75em 0.25em',
 };
 
-export default function Task(
+function Task(
   {
     task: { id, title, url, state, subtitle },
     onSnoozeTask,
@@ -46,3 +49,25 @@ export default function Task(
     </div>
   );
 }
+
+Task.fragments = {
+  task: (
+    gql`
+    fragment TaskFragment on Task {
+      id
+      title
+      subtitle
+      url
+      state
+    }
+  `
+  ),
+};
+
+Task.PropTypes = {
+  task: propType(Task.fragments.task).isRequired,
+  onSnoozeTask: PropTypes.func,
+  onPinTask: PropTypes.func,
+};
+
+export default Task;
