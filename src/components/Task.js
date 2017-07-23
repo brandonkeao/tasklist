@@ -1,4 +1,5 @@
 import React from 'react';
+import '../index.css';
 
 const alignStyles = {
   fontSize: '14px',
@@ -8,7 +9,7 @@ const alignStyles = {
 
 export default function Task(
   {
-    task: { id, title, url, state, subtile },
+    task: { id, title, url, state, subtitle },
     onSnoozeTask,
     onPinTask,
   },
@@ -31,8 +32,8 @@ export default function Task(
         placeholder="Input title"
         onClick={() => open(url, '_new')}
       />
-      {subtile &&
-        <p style={{ flex: 1, color: '#666', ...alignStyles }}>{subtile}</p>}
+      {subtitle &&
+        <p style={{ flex: 1, color: '#666', ...alignStyles }}>{subtitle}</p>}
       {state !== 'TASK_SNOOZED' &&
         state !== 'TASK_ARCHIVED' &&
         <a style={alignStyles} onClick={() => onSnoozeTask(id)}>

@@ -1,13 +1,14 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
 
+import '../index.css'
 import Task from './Task';
 
 function buildStory(attrs) {
   const task = {
     id: Math.round(Math.random() * 1000000).toString(),
     title: 'Test Task',
-    subtile: 'on Test Board',
+    subtitle: 'on Test Board',
     url: 'http://www.pairin.com',
     state: 'TASK_INBOX',
     updatedAt: Date.now(),
