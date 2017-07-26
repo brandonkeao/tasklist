@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "apollo-client": "^1.9.0-1",
     "graphql": "^0.10.5",
     "graphql-anywhere": "^3.1.0",
     "graphql-tag": "^2.4.2",
     "react": "^15.6.1",
+    "react-apollo": "^1.4.8",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.10"
   },
@@ -23,6 +25,8 @@
     "storyshots": "^3.2.2"
   },
   "babel": {
-    "presets": ["react-app"]
+    "presets": [
+      "react-app"
+    ]
   }
 }

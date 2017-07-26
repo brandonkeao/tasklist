@@ -6,7 +6,6 @@ const req = require.context('../src', true, /.story.js$/);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));
-  //require('../stories');
 }
 
 configure(loadStories, module);
