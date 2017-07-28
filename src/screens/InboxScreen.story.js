@@ -94,14 +94,3 @@ storiesOf('InboxScreen', module)
     mockTasks.inbox = inboxTasks;
     return <InboxScreen key="none" />;
   });
-
-
-
-
-
-
-
-
-
-
-...

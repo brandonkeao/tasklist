@@ -20,7 +20,7 @@ const withData = graphql(
 `,
   {
     options: {
-      forceFetch: true,
+      fetchPolicy: 'network-only',
       pollInterval: 10 * 1000,
     },
     props({ data: { loading, error, me } }) {
