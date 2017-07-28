@@ -22,6 +22,8 @@
   },
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
+    "apollo-test-utils": "^0.3.2",
+    "graphql-tools": "^1.1.0",
     "storyshots": "^3.2.2"
   },
   "babel": {
