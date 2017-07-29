@@ -21,4 +21,10 @@ const typeDefs = [`
   }
 `];
 
+typeDefs.push(requireGraphQL('./TaskState.graphql'));
+
 export default typeDefs;
+
+typeDefs.push(requireGraphQL('./Task.graphql'));
+
+typeDefs.push(requireGraphQL('./User.graphql'));

@@ -7,3 +7,9 @@ export default function addModelsToContext(context) {
   });
   return newContext;
 }
+
+import Task from './Task';
+models.Task = Task;
+
+import User from './User';
+models.User = User;

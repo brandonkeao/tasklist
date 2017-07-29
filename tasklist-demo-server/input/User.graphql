@@ -1,0 +1,6 @@
+type User {
+  email: String!
+  hasGitHubToken: Boolean!
+  hasTrelloToken: Boolean!
+  tasks(state: TaskState): [Task!]! @hasMany(as: "owner")
+}

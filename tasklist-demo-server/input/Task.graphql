@@ -1,0 +1,15 @@
+type Task {
+  title: String!
+
+  # This field references another type (which we will create soon)
+  # and CGS will expect our database record to have an `ownerId` field.
+  owner: User!
+
+  # We mark this field as an enum, so CGS knows
+  # it's not a reference to another type
+  state: TaskState! @enum
+
+  # These two are optional for now
+  subtitle: String
+  url: String
+}
